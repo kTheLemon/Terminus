@@ -6,8 +6,8 @@ end
 
 function Terminus.fixColor(color)
 	local r, g, b =  Terminus.clamp(math.floor(color[1] + 0.5), 0, 255),
-					 Terminus.clamp(math.floor(color[2]), 0, 255),
-					 Terminus.clamp(math.floor(color[3]), 0, 255)
+					 Terminus.clamp(math.floor(color[2] + 0.5), 0, 255),
+					 Terminus.clamp(math.floor(color[3] + 0.5), 0, 255)
 
 	return {r, g, b}
 end
