@@ -7,3 +7,6 @@ Used to easily store and render a large chunk of pixels at once. By default, the
 
 # Windows Weirdness
 If the screen looks weird / each group of pixels is replaced by a bunch of random characters, try running `chcp 65001` in your terminal. Also, be aware that (at least from my experience) the windows terminal does not like getting resized.
+
+# Coding Conventions
+If you want to make a PR, ***use tabs.*** Other than that, it doesn't really matter.

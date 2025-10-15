@@ -1,9 +1,15 @@
 local Terminus = {}
 
+-- Clamps a number x between min and max
+---@param x number[3]
+---@param min number[3]
+---@param max number[3]
 function Terminus.clamp(x, min, max)
 	return math.min(math.max(x, min), max)
 end
 
+-- Makes sure a color is proper RGB
+---@param color number[3]
 function Terminus.fixColor(color)
 	local r, g, b =  Terminus.clamp(math.floor(color[1] + 0.5), 0, 255),
 					 Terminus.clamp(math.floor(color[2] + 0.5), 0, 255),
@@ -12,6 +18,7 @@ function Terminus.fixColor(color)
 	return {r, g, b}
 end
 
+---@param oColor integer[3]
 function Terminus.rgbToStandard(oColor)
 	local color = Terminus.fixColor(oColor)
 	local r, g, b =  Terminus.clamp(color[1], 0, 255), Terminus.clamp(color[2], 0, 255), Terminus.clamp(color[3], 0, 255)
